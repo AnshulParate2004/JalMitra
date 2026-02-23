@@ -1,7 +1,3 @@
-# Simulator: POST a water quality reading to the FastAPI backend.
-# Run: python send_reading.py [--url http://localhost:8000] [--alert]
-# --alert sends bad values to trigger SMS.
-
 import argparse
 import urllib.request
 import json

@@ -1,7 +1,3 @@
-# Household Water Quality - FastAPI backend with Supabase.
-# ESP32 -> POST /api/readings -> store in Supabase -> broadcast via WebSocket to React (live).
-# On threshold breach: store alert, send SMS, broadcast alert to React.
-
 from datetime import datetime, timezone
 from typing import Any, Optional
 
@@ -23,7 +19,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# In-memory fallback when Supabase is not configured
 readings_store: list[dict] = []
 alerts_store: list[dict] = []
 
@@ -161,7 +156,6 @@ def health():
 
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
-    """Live updates: React connects here; backend broadcasts on every new reading/alert."""
     await ws_manager.connect(websocket)
     try:
         while True:
@@ -217,7 +211,6 @@ def get_alerts(limit: int = 20):
 
 @app.get("/api/stats")
 def get_stats():
-    """Summary for dashboard: total readings, alerts, and latest timestamp."""
     readings = _get_readings(limit=5000, device_id=None)
     alerts = _get_alerts(limit=1000)
     latest = _get_latest(None)

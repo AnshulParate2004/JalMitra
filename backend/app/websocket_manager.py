@@ -1,4 +1,3 @@
-# WebSocket connection manager: broadcast to all connected React clients.
 import asyncio
 import json
 from typing import List
@@ -19,7 +18,6 @@ class ConnectionManager:
             self.connections.remove(websocket)
 
     async def broadcast(self, message: dict):
-        """Send JSON message to all connected clients (React live dashboard)."""
         if not self.connections:
             return
         text = json.dumps(message)

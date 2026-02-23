@@ -1,7 +1,4 @@
-/*
- * ESP32 Water Quality: sensors + Wi-Fi POST + SIM900A SMS (offline alerts)
- * Sensors: DS18B20 (temp), turbidity, water level, pH, MQ135. Add TDS pin if you have the sensor.
- */
+
 
 #include <OneWire.h>
 #include <DallasTemperature.h>

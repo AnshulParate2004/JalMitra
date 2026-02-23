@@ -1,17 +1,27 @@
-import { useState } from 'react'
-import { Layout, type Page } from './components/Layout'
-import { Dashboard } from './pages/Dashboard'
-import { History } from './pages/History'
-import { Alerts } from './pages/Alerts'
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
 
-export default function App() {
-  const [page, setPage] = useState<Page>('dashboard')
+const queryClient = new QueryClient();
 
-  return (
-    <Layout page={page} onNavigate={setPage}>
-      {page === 'dashboard' && <Dashboard />}
-      {page === 'history' && <History />}
-      {page === 'alerts' && <Alerts />}
-    </Layout>
-  )
-}
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
+
+export default App;
