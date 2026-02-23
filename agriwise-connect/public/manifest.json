@@ -1,0 +1,14 @@
+{
+  "name": "Khet Doctor + Seekho",
+  "short_name": "KhetDoc",
+  "description": "Smart Irrigation Advisor + Farming Education Portal for Indian Farmers",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f5f0",
+  "theme_color": "#2D5016",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/favicon.ico", "sizes": "64x64", "type": "image/x-icon" }
+  ],
+  "categories": ["agriculture", "education"]
+}
