@@ -19,4 +19,4 @@ ESP32 sensors send **pH**, **turbidity**, and **TDS** to the cloud; a live dashb
 ## Architecture
 
 ![Architecture](architecture.png)
-!!
+!!!!!
