@@ -1,73 +1,139 @@
-# Welcome to your Lovable project
+# Krishi Mitra - कृषि मित्र
 
-## Project info
+**Your Farm's Best Friend** - Smart Irrigation Advisor + Farming Education Portal for Indian Farmers
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🌾 About
 
-## How can I edit this code?
+Krishi Mitra is a comprehensive agriculture solution that provides:
+- **Daily Irrigation Advice**: AI-powered recommendations based on soil moisture and crop cycle
+- **Education Portal**: Videos, guides, crop calendars, and government scheme information
+- **Voice Bot with RAG**: Real-time assistance for farming queries using Retrieval Augmented Generation
+- **Multi-language Support**: Available in 12 Indian languages (Hindi, Marathi, Tamil, Telugu, etc.)
 
-There are several ways of editing your application.
+## 🚀 Getting Started
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- Node.js 18+ and npm (or use [nvm](https://github.com/nvm-sh/nvm#installing-and-updating))
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Installation
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Step 1: Navigate to the project directory
+cd agriwise-connect
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Step 2: Install dependencies
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 3: Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🛠️ Tech Stack
 
-**Use GitHub Codespaces**
+- **Vite** - Build tool and dev server
+- **React 18** - UI framework
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **shadcn/ui** - UI components
+- **Framer Motion** - Animations
+- **React Router** - Routing
+- **i18next** - Internationalization
+- **React Query** - Data fetching
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📱 Features
 
-## What technologies are used for this project?
+### 1. Registration Flow
+- Phone OTP verification
+- Language selection (12 languages)
+- Farm location mapping
+- Crop selection
 
-This project is built with:
+### 2. Dashboard
+- Real-time soil moisture display
+- Irrigation recommendations
+- Weather information
+- Quick access to education content
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### 3. Education Portal
+- Video library
+- How-to guides
+- Crop calendars
+- Government scheme guides (PMKSY, etc.)
+- Interactive quizzes
 
-## How can I deploy this project?
+### 4. Voice Bot (RAG-powered)
+- Voice input support
+- Text-to-speech responses
+- Government scheme queries
+- Irrigation advice
+- Crop information
+- Real-time RAG from vector database
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### 5. Notifications
+- Daily irrigation alerts
+- Crop stage updates
+- Scheme reminders
 
-## Can I connect a custom domain to my Lovable project?
+## 🔧 Configuration
 
-Yes, you can!
+Create a `.env` file in the root directory:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```env
+VITE_API_URL=http://localhost:8000
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 📦 Build
+
+```sh
+# Production build
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## 🧪 Testing
+
+```sh
+# Run tests
+npm test
+
+# Watch mode
+npm run test:watch
+```
+
+## 📄 Project Structure
+
+```
+agriwise-connect/
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── pages/          # Page components
+│   ├── services/       # API services
+│   ├── i18n/          # Translations
+│   ├── contexts/       # React contexts
+│   ├── hooks/         # Custom hooks
+│   └── lib/           # Utilities
+├── public/            # Static assets
+└── package.json       # Dependencies
+```
+
+## 🌐 Backend Integration
+
+This frontend connects to the FastAPI backend:
+- Authentication: `/api/v1/auth`
+- Farms: `/api/v1/farms`
+- Irrigation: `/api/v1/irrigation`
+- Education: `/api/v1/education`
+- Voice Bot: `/api/v1/voice_bot/query`
+
+## 📝 License
+
+This project is part of the Krishi Mitra agriculture solution.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please ensure code follows the project's style guidelines.

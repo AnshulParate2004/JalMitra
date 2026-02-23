@@ -1,4 +1,4 @@
-import { Home, BookOpen, Droplets, Bell } from 'lucide-react';
+import { Home, BookOpen, Droplets, Bell, MessageSquare } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -7,6 +7,7 @@ const navItems = [
   { key: 'home', icon: Home, path: '/' },
   { key: 'farm', icon: Droplets, path: '/dashboard' },
   { key: 'learn', icon: BookOpen, path: '/education' },
+  { key: 'voice_bot', icon: MessageSquare, path: '/voice-bot' },
   { key: 'alerts', icon: Bell, path: '/notifications' },
 ];
 

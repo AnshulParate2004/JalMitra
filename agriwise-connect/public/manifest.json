@@ -1,7 +1,7 @@
 {
-  "name": "Khet Doctor + Seekho",
-  "short_name": "KhetDoc",
-  "description": "Smart Irrigation Advisor + Farming Education Portal for Indian Farmers",
+  "name": "Krishi Mitra - कृषि मित्र",
+  "short_name": "Krishi Mitra",
+  "description": "Your Farm's Best Friend - Smart Irrigation Advisor + Farming Education Portal",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f5f5f0",
