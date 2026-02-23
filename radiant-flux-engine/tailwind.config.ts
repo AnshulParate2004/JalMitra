@@ -56,6 +56,17 @@ export default {
           magenta: "hsl(var(--neon-magenta))",
           purple: "hsl(var(--neon-purple))",
         },
+        cyan: {
+          DEFAULT: "hsl(var(--cyan))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
+        },
         glass: {
           bg: "hsl(var(--glass-bg))",
           border: "hsl(var(--glass-border))",

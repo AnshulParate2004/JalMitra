@@ -2,9 +2,7 @@ import { motion } from "framer-motion";
 
 const CTASection = () => {
   return (
-    <section className="relative section-padding">
-      <div className="absolute inset-0 mesh-gradient" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-neon-cyan/5 blur-[150px]" />
+    <section className="relative section-padding bg-background bg-grid">
 
       <div className="relative z-10 container mx-auto text-center max-w-3xl">
         <motion.div
