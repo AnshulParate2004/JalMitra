@@ -1,1 +1,0 @@
-# Agromonitoring API - Soil moisture

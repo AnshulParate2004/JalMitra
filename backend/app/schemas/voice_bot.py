@@ -1,1 +1,0 @@
-# Voice bot Pydantic schemas

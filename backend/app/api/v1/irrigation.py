@@ -1,1 +1,0 @@
-# Irrigation advice endpoints

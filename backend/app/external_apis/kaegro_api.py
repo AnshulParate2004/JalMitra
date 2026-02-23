@@ -1,1 +1,0 @@
-# Kaegro API - Soil type
